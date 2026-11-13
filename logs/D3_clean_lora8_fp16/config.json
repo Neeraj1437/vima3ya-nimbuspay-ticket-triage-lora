@@ -1,0 +1,14 @@
+{
+ "name": "D3_clean_lora8_fp16",
+ "quant4": false,
+ "r": 8,
+ "alpha": 16,
+ "lr": 0.0002,
+ "epochs": 3,
+ "bs": 4,
+ "accum": 4,
+ "seed": 0,
+ "warmup_frac": 0.05,
+ "n_train": 1262,
+ "note": "Exp3: LoRA rank 8 (alpha 16); else = R1"
+}

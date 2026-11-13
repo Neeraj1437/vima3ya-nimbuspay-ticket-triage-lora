@@ -1,0 +1,14 @@
+{
+ "run": "FINAL_aug_lora16_fp16",
+ "note": "final model: D4 configuration retrained by this notebook",
+ "quant": "16-bit",
+ "r": 16,
+ "lr": 0.0002,
+ "epochs": 3,
+ "n_train": 1632,
+ "json_valid": 1.0,
+ "exact": 0.94,
+ "mean_field": 0.9881,
+ "peak_train_gib": 9.96,
+ "train_min": 34.1
+}

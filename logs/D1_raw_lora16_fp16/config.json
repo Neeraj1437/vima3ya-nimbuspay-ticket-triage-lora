@@ -1,0 +1,14 @@
+{
+ "name": "D1_raw_lora16_fp16",
+ "quant4": false,
+ "r": 16,
+ "alpha": 32,
+ "lr": 0.0002,
+ "epochs": 3,
+ "bs": 4,
+ "accum": 4,
+ "seed": 0,
+ "warmup_frac": 0.05,
+ "n_train": 1445,
+ "note": "Exp1: raw train.jsonl as given (1,445 rows); else = R1"
+}

@@ -1,0 +1,14 @@
+{
+ "run": "D4_aug_lora16_fp16",
+ "note": "Exp4: clean + rule-boundary augmentation (amounts near Rs 5k/50k, legal threats); else = R1",
+ "quant": "16-bit",
+ "r": 16,
+ "lr": 0.0002,
+ "epochs": 3,
+ "n_train": 1632,
+ "json_valid": 1.0,
+ "exact": 0.95,
+ "mean_field": 0.99,
+ "peak_train_gib": 9.96,
+ "train_min": 38.1
+}

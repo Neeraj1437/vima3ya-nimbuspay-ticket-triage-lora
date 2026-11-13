@@ -1,0 +1,10 @@
+run,note,quant,r,lr,epochs,n_train,json_valid,exact,mean_field,peak_train_gib,train_min
+R1_clean_lora16_fp16,"reference: clean data, 16-bit LoRA r16, lr 2e-4, 3 epochs, eff. batch 16",16-bit,16,0.0002,3,1262,1.0,0.915,0.9825,10.36,27.5
+B1_zeroshot,"Part B1: base model, fixed prompt, no fine-tuning",16-bit,0,0.0,0,0,0.005,0.0,0.0,7.68,0.0
+B2_rules_in_prompt,Part B2: base model + SCHEMA.md in the system prompt (reference only),16-bit,0,0.0,0,0,1.0,0.235,0.8063,8.93,0.0
+D1_raw_lora16_fp16,"Exp1: raw train.jsonl as given (1,445 rows); else = R1",16-bit,16,0.0002,3,1445,1.0,0.925,0.985,9.96,30.1
+D2_clean_qlora_4bit,Exp2: 4-bit NF4 QLoRA; else = R1,4-bit,16,0.0002,3,1262,1.0,0.935,0.9869,8.29,34.3
+D3_clean_lora8_fp16,Exp3: LoRA rank 8 (alpha 16); else = R1,16-bit,8,0.0002,3,1262,1.0,0.9,0.9806,9.73,27.0
+D4_aug_lora16_fp16,"Exp4: clean + rule-boundary augmentation (amounts near Rs 5k/50k, legal threats); else = R1",16-bit,16,0.0002,3,1632,1.0,0.95,0.99,9.96,38.1
+FINAL_D4_aug_lora16_fp16,final model: retrain of D4_aug_lora16_fp16,16-bit,16,0.0002,3,1632,1.0,0.935,0.9888,9.96,38.3
+FINAL_aug_lora16_fp16,final model: D4 configuration retrained by this notebook,16-bit,16,0.0002,3,1632,1.0,0.94,0.9881,9.96,34.1

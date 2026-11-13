@@ -1,0 +1,14 @@
+{
+ "run": "D3_clean_lora8_fp16",
+ "note": "Exp3: LoRA rank 8 (alpha 16); else = R1",
+ "quant": "16-bit",
+ "r": 8,
+ "lr": 0.0002,
+ "epochs": 3,
+ "n_train": 1262,
+ "json_valid": 1.0,
+ "exact": 0.9,
+ "mean_field": 0.9806,
+ "peak_train_gib": 9.73,
+ "train_min": 27.0
+}
