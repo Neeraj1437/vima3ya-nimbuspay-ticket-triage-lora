@@ -1,0 +1,8 @@
+# never commit data, checkpoints or the base model
+*.jsonl
+!predictions_test.jsonl
+!logs/**/*.jsonl
+candidate_pack/
+ckpt*/
+__pycache__/
+.ipynb_checkpoints/
