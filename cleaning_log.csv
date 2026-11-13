@@ -1,0 +1,359 @@
+id,action,reason
+tr-00008,drop,ticket body identical to a dev ticket (leakage); dev rows must never be trained on
+tr-00013,fix,priority P1 -> P3 per SCHEMA v2 rules (no P1/P2 condition met)
+tr-00018,fix,priority P1 -> P3 per SCHEMA v2 rules (no P1/P2 condition met)
+tr-00020,fix,"legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows | txn_date DD/MM/YYYY -> YYYY-MM-DD (DD/MM proven: 17 rows with day>12, 0 with month>12; all on/before Received)"
+tr-00023,fix,priority P1 -> P3 per SCHEMA v2 rules (no P1/P2 condition met)
+tr-00034,drop,"placeholder ticket text (e.g. ""test"", ""asdf asdf"") with a fully populated label; label not grounded in input"
+tr-00045,fix,priority P3 -> P1 per SCHEMA v2 rules (category fraud)
+tr-00049,fix,legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows
+tr-00058,fix,"legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows | txn_date DD/MM/YYYY -> YYYY-MM-DD (DD/MM proven: 17 rows with day>12, 0 with month>12; all on/before Received)"
+tr-00059,fix,priority P1 -> P3 per SCHEMA v2 rules (no P1/P2 condition met)
+tr-00060,drop,"label JSON truncated (63-137 chars vs 147-194 normal); language/needs_human missing, not recoverable with certainty"
+tr-00065,drop,near-duplicate of dev ticket dv-00175 (char-ngram cosine 0.937; differs only by whitespace/'Thx'/filler); leakage
+tr-00071,fix,"txn_id normalised to NP+10 digits (uppercase, no spaces/hyphens); verified present in ticket text"
+tr-00072,fix,legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows
+tr-00073,fix,amount_paise was in rupees (not x100; sometimes decimals dropped); re-derived from the amount stated in the ticket
+tr-00074,drop,near-duplicate of tr-00025 (char-ngram cosine >= 0.95; differs only by whitespace/'Thx'/punctuation; identical label)
+tr-00077,fix,"legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows | txn_date DD/MM/YYYY -> YYYY-MM-DD (DD/MM proven: 17 rows with day>12, 0 with month>12; all on/before Received)"
+tr-00086,drop,ticket body identical to a dev ticket (leakage); dev rows must never be trained on
+tr-00095,drop,"label JSON truncated (63-137 chars vs 147-194 normal); language/needs_human missing, not recoverable with certainty"
+tr-00103,drop,near-duplicate of tr-00006 (char-ngram cosine >= 0.95; differs only by whitespace/'Thx'/punctuation; identical label)
+tr-00114,fix,legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows
+tr-00120,fix,legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows
+tr-00123,fix,"legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows | txn_date DD/MM/YYYY -> YYYY-MM-DD (DD/MM proven: 17 rows with day>12, 0 with month>12; all on/before Received)"
+tr-00125,drop,"label JSON truncated (63-137 chars vs 147-194 normal); language/needs_human missing, not recoverable with certainty"
+tr-00129,fix,"priority P3 -> P2 per SCHEMA v2 rules (payment_failed with amount >= Rs 5,000)"
+tr-00130,drop,ticket body identical to a dev ticket (leakage); dev rows must never be trained on
+tr-00144,fix,amount_paise was in rupees (not x100; sometimes decimals dropped); re-derived from the amount stated in the ticket
+tr-00146,fix,priority P1 -> P3 per SCHEMA v2 rules (no P1/P2 condition met)
+tr-00147,fix,"txn_id normalised to NP+10 digits (uppercase, no spaces/hyphens); verified present in ticket text"
+tr-00151,fix,"txn_id normalised to NP+10 digits (uppercase, no spaces/hyphens); verified present in ticket text"
+tr-00153,fix,"legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows | txn_date DD/MM/YYYY -> YYYY-MM-DD (DD/MM proven: 17 rows with day>12, 0 with month>12; all on/before Received)"
+tr-00154,fix,"priority P3 -> P2 per SCHEMA v2 rules (payment_failed with amount >= Rs 5,000)"
+tr-00156,drop,exact duplicate of tr-00030 (identical ticket and label)
+tr-00160,fix,"legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows | txn_date DD/MM/YYYY -> YYYY-MM-DD (DD/MM proven: 17 rows with day>12, 0 with month>12; all on/before Received)"
+tr-00162,drop,ticket body identical to a dev ticket (leakage); dev rows must never be trained on
+tr-00164,drop,"placeholder ticket text (e.g. ""test"", ""asdf asdf"") with a fully populated label; label not grounded in input"
+tr-00167,fix,amount_paise was in rupees (not x100; sometimes decimals dropped); re-derived from the amount stated in the ticket
+tr-00172,drop,"label JSON truncated (63-137 chars vs 147-194 normal); language/needs_human missing, not recoverable with certainty"
+tr-00178,fix,legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows
+tr-00184,fix,priority P3 -> P1 per SCHEMA v2 rules (legal threat ('lawyer'))
+tr-00187,fix,amount_paise was in rupees (not x100; sometimes decimals dropped); re-derived from the amount stated in the ticket
+tr-00192,fix,legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows
+tr-00199,fix,amount_paise was in rupees (not x100; sometimes decimals dropped); re-derived from the amount stated in the ticket
+tr-00208,drop,exact duplicate of tr-00150 (identical ticket and label)
+tr-00211,drop,exact duplicate of tr-00137 (identical ticket and label)
+tr-00212,fix,"priority P3 -> P1 per SCHEMA v2 rules (amount >= Rs 50,000)"
+tr-00219,fix,legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows
+tr-00220,fix,"priority P3 -> P2 per SCHEMA v2 rules (refund with amount >= Rs 5,000)"
+tr-00222,fix,amount_paise was in rupees (not x100; sometimes decimals dropped); re-derived from the amount stated in the ticket
+tr-00223,fix,legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows
+tr-00225,fix,priority P1 -> P3 per SCHEMA v2 rules (no P1/P2 condition met)
+tr-00226,drop,exact duplicate of tr-00070 (identical ticket and label)
+tr-00249,fix,"legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows | txn_date DD/MM/YYYY -> YYYY-MM-DD (DD/MM proven: 17 rows with day>12, 0 with month>12; all on/before Received)"
+tr-00258,fix,legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows
+tr-00261,drop,ticket body identical to a dev ticket (leakage); dev rows must never be trained on
+tr-00263,fix,"legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows | txn_date DD/MM/YYYY -> YYYY-MM-DD (DD/MM proven: 17 rows with day>12, 0 with month>12; all on/before Received)"
+tr-00264,fix,amount_paise was in rupees (not x100; sometimes decimals dropped); re-derived from the amount stated in the ticket
+tr-00266,drop,ticket body identical to a dev ticket (leakage); dev rows must never be trained on
+tr-00267,drop,"label JSON truncated (63-137 chars vs 147-194 normal); language/needs_human missing, not recoverable with certainty"
+tr-00280,drop,ticket body identical to a dev ticket (leakage); dev rows must never be trained on
+tr-00294,fix,"priority P3 -> P2 per SCHEMA v2 rules (payment_failed with amount >= Rs 5,000)"
+tr-00297,drop,exact duplicate of tr-00142 (identical ticket and label)
+tr-00306,fix,priority P1 -> P3 per SCHEMA v2 rules (no P1/P2 condition met)
+tr-00307,drop,near-duplicate of tr-00207 (char-ngram cosine >= 0.95; differs only by whitespace/'Thx'/punctuation; identical label)
+tr-00309,fix,priority P1 -> P3 per SCHEMA v2 rules (no P1/P2 condition met)
+tr-00312,fix,priority P1 -> P3 per SCHEMA v2 rules (no P1/P2 condition met)
+tr-00317,drop,ticket body identical to a dev ticket (leakage); dev rows must never be trained on
+tr-00318,drop,empty ticket body (header only) with a populated label; label not grounded in input
+tr-00320,fix,legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows
+tr-00328,fix,amount_paise was in rupees (not x100; sometimes decimals dropped); re-derived from the amount stated in the ticket
+tr-00330,drop,ticket body identical to a dev ticket (leakage); dev rows must never be trained on
+tr-00340,drop,near-duplicate of tr-00299 (char-ngram cosine >= 0.95; differs only by whitespace/'Thx'/punctuation; identical label)
+tr-00343,drop,ticket body identical to a dev ticket (leakage); dev rows must never be trained on
+tr-00346,fix,legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows
+tr-00347,fix,"legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows | txn_date DD/MM/YYYY -> YYYY-MM-DD (DD/MM proven: 17 rows with day>12, 0 with month>12; all on/before Received)"
+tr-00349,drop,exact duplicate of tr-00217 (identical ticket and label)
+tr-00355,fix,priority P3 -> P2 per SCHEMA v2 rules (category account_access)
+tr-00357,drop,"label JSON truncated (63-137 chars vs 147-194 normal); language/needs_human missing, not recoverable with certainty"
+tr-00358,drop,ticket body identical to a dev ticket (leakage); dev rows must never be trained on
+tr-00364,drop,exact duplicate of tr-00173 (identical ticket and label)
+tr-00365,fix,legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows
+tr-00370,fix,"legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows | txn_date DD/MM/YYYY -> YYYY-MM-DD (DD/MM proven: 17 rows with day>12, 0 with month>12; all on/before Received)"
+tr-00373,drop,exact duplicate of tr-00345 (identical ticket and label)
+tr-00379,drop,ticket body identical to a dev ticket (leakage); dev rows must never be trained on
+tr-00380,fix,priority P1 -> P3 per SCHEMA v2 rules (no P1/P2 condition met)
+tr-00382,fix,amount_paise was in rupees (not x100; sometimes decimals dropped); re-derived from the amount stated in the ticket
+tr-00385,fix,legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows
+tr-00391,fix,"txn_id normalised to NP+10 digits (uppercase, no spaces/hyphens); verified present in ticket text"
+tr-00397,drop,near-duplicate of tr-00078 (char-ngram cosine >= 0.95; differs only by whitespace/'Thx'/punctuation; identical label)
+tr-00407,fix,amount_paise was in rupees (not x100; sometimes decimals dropped); re-derived from the amount stated in the ticket
+tr-00413,fix,priority P1 -> P3 per SCHEMA v2 rules (no P1/P2 condition met)
+tr-00420,fix,"txn_id normalised to NP+10 digits (uppercase, no spaces/hyphens); verified present in ticket text"
+tr-00423,drop,near-duplicate of dev ticket dv-00009 (cosine 0.833; intent-only ticket differing only by greeting/filler; leak threshold 0.83 set by reading the 0.78-0.85 band)
+tr-00424,fix,priority P3 -> P1 per SCHEMA v2 rules (legal threat ('Consumer court'))
+tr-00427,fix,"priority P3 -> P1 per SCHEMA v2 rules (amount >= Rs 50,000)"
+tr-00436,drop,exact duplicate of tr-00175 (identical ticket and label)
+tr-00452,fix,priority P1 -> P3 per SCHEMA v2 rules (no P1/P2 condition met)
+tr-00454,drop,exact duplicate of tr-00444 (identical ticket and label)
+tr-00456,drop,near-duplicate of tr-00079 (char-ngram cosine >= 0.95; differs only by whitespace/'Thx'/punctuation; identical label)
+tr-00457,fix,legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows
+tr-00460,fix,"txn_id normalised to NP+10 digits (uppercase, no spaces/hyphens); verified present in ticket text"
+tr-00461,fix,legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows
+tr-00470,fix,"txn_id normalised to NP+10 digits (uppercase, no spaces/hyphens); verified present in ticket text"
+tr-00472,fix,amount_paise was in rupees (not x100; sometimes decimals dropped); re-derived from the amount stated in the ticket
+tr-00473,drop,near-duplicate of tr-00009 (char-ngram cosine >= 0.95; differs only by whitespace/'Thx'/punctuation; identical label)
+tr-00475,fix,legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows
+tr-00476,drop,exact duplicate of tr-00191 (identical ticket and label)
+tr-00478,drop,"label JSON truncated (63-137 chars vs 147-194 normal); language/needs_human missing, not recoverable with certainty"
+tr-00485,fix,priority P1 -> P3 per SCHEMA v2 rules (no P1/P2 condition met)
+tr-00496,drop,ticket body identical to a dev ticket (leakage); dev rows must never be trained on
+tr-00497,drop,"label JSON truncated (63-137 chars vs 147-194 normal); language/needs_human missing, not recoverable with certainty"
+tr-00502,drop,exact duplicate of tr-00323 (identical ticket and label)
+tr-00503,fix,priority P1 -> P3 per SCHEMA v2 rules (no P1/P2 condition met)
+tr-00505,fix,priority P1 -> P3 per SCHEMA v2 rules (no P1/P2 condition met)
+tr-00508,fix,priority P1 -> P3 per SCHEMA v2 rules (no P1/P2 condition met)
+tr-00514,drop,ticket body identical to a dev ticket (leakage); dev rows must never be trained on
+tr-00516,fix,legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows
+tr-00523,fix,priority P1 -> P3 per SCHEMA v2 rules (no P1/P2 condition met)
+tr-00532,drop,exact duplicate of tr-00435 (identical ticket and label)
+tr-00533,fix,priority P1 -> P3 per SCHEMA v2 rules (no P1/P2 condition met)
+tr-00534,drop,exact duplicate of tr-00251 (identical ticket and label)
+tr-00540,drop,near-duplicate of tr-00429 (char-ngram cosine >= 0.95; differs only by whitespace/'Thx'/punctuation; identical label)
+tr-00546,drop,exact duplicate of tr-00490 (identical ticket and label)
+tr-00555,drop,"placeholder ticket text (e.g. ""test"", ""asdf asdf"") with a fully populated label; label not grounded in input"
+tr-00556,fix,"legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows | txn_date DD/MM/YYYY -> YYYY-MM-DD (DD/MM proven: 17 rows with day>12, 0 with month>12; all on/before Received)"
+tr-00558,drop,"label JSON truncated (63-137 chars vs 147-194 normal); language/needs_human missing, not recoverable with certainty"
+tr-00559,drop,ticket body identical to a dev ticket (leakage); dev rows must never be trained on
+tr-00560,fix,amount_paise was in rupees (not x100; sometimes decimals dropped); re-derived from the amount stated in the ticket
+tr-00567,fix,priority P3 -> P2 per SCHEMA v2 rules (category account_access)
+tr-00570,fix,"txn_id normalised to NP+10 digits (uppercase, no spaces/hyphens); verified present in ticket text"
+tr-00573,drop,exact duplicate of tr-00203 (identical ticket and label)
+tr-00577,fix,"legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows | txn_date DD/MM/YYYY -> YYYY-MM-DD (DD/MM proven: 17 rows with day>12, 0 with month>12; all on/before Received)"
+tr-00581,drop,near-duplicate of tr-00108 (char-ngram cosine >= 0.95; differs only by whitespace/'Thx'/punctuation; identical label)
+tr-00583,drop,ticket body identical to a dev ticket (leakage); dev rows must never be trained on
+tr-00585,drop,ticket body identical to a dev ticket (leakage); dev rows must never be trained on
+tr-00588,drop,ticket body identical to a dev ticket (leakage); dev rows must never be trained on
+tr-00589,fix,legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows
+tr-00595,fix,"txn_id normalised to NP+10 digits (uppercase, no spaces/hyphens); verified present in ticket text"
+tr-00602,fix,"legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows | txn_date DD/MM/YYYY -> YYYY-MM-DD (DD/MM proven: 17 rows with day>12, 0 with month>12; all on/before Received)"
+tr-00605,drop,"label JSON truncated (63-137 chars vs 147-194 normal); language/needs_human missing, not recoverable with certainty"
+tr-00606,fix,legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows
+tr-00609,drop,ticket body identical to a dev ticket (leakage); dev rows must never be trained on
+tr-00610,fix,legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows
+tr-00614,drop,near-duplicate of dev ticket dv-00135 (char-ngram cosine 0.987; differs only by whitespace/'Thx'/filler); leakage
+tr-00616,drop,ticket body identical to a dev ticket (leakage); dev rows must never be trained on
+tr-00622,fix,amount_paise was in rupees (not x100; sometimes decimals dropped); re-derived from the amount stated in the ticket
+tr-00628,fix,"legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows | txn_date DD/MM/YYYY -> YYYY-MM-DD (DD/MM proven: 17 rows with day>12, 0 with month>12; all on/before Received)"
+tr-00635,drop,near-duplicate of tr-00115 (char-ngram cosine >= 0.95; differs only by whitespace/'Thx'/punctuation; identical label)
+tr-00638,fix,priority P3 -> P1 per SCHEMA v2 rules (category fraud)
+tr-00648,fix,priority P3 -> P2 per SCHEMA v2 rules (category account_access)
+tr-00649,fix,"txn_id normalised to NP+10 digits (uppercase, no spaces/hyphens); verified present in ticket text"
+tr-00650,drop,near-duplicate of dev ticket dv-00178 (char-ngram cosine 0.991; differs only by whitespace/'Thx'/filler); leakage
+tr-00653,fix,amount_paise was in rupees (not x100; sometimes decimals dropped); re-derived from the amount stated in the ticket
+tr-00656,fix,"legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows | txn_date DD/MM/YYYY -> YYYY-MM-DD (DD/MM proven: 17 rows with day>12, 0 with month>12; all on/before Received)"
+tr-00665,drop,exact duplicate of tr-00322 (identical ticket and label)
+tr-00669,drop,ticket body identical to a dev ticket (leakage); dev rows must never be trained on
+tr-00670,fix,"legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows | txn_date DD/MM/YYYY -> YYYY-MM-DD (DD/MM proven: 17 rows with day>12, 0 with month>12; all on/before Received)"
+tr-00671,drop,near-duplicate of tr-00400 (char-ngram cosine >= 0.95; differs only by whitespace/'Thx'/punctuation; identical label)
+tr-00674,drop,"label JSON truncated (63-137 chars vs 147-194 normal); language/needs_human missing, not recoverable with certainty"
+tr-00677,fix,"legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows | txn_date DD/MM/YYYY -> YYYY-MM-DD (DD/MM proven: 17 rows with day>12, 0 with month>12; all on/before Received)"
+tr-00681,drop,near-duplicate of dev ticket dv-00038 (char-ngram cosine 0.978; differs only by whitespace/'Thx'/filler); leakage
+tr-00685,fix,legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows
+tr-00688,fix,amount_paise was in rupees (not x100; sometimes decimals dropped); re-derived from the amount stated in the ticket
+tr-00689,fix,priority P1 -> P3 per SCHEMA v2 rules (no P1/P2 condition met)
+tr-00690,drop,near-duplicate of tr-00499 (char-ngram cosine >= 0.95; differs only by whitespace/'Thx'/punctuation; identical label)
+tr-00691,fix,amount_paise was in rupees (not x100; sometimes decimals dropped); re-derived from the amount stated in the ticket
+tr-00701,drop,exact duplicate of tr-00384 (identical ticket and label)
+tr-00704,fix,"legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows | txn_date DD/MM/YYYY -> YYYY-MM-DD (DD/MM proven: 17 rows with day>12, 0 with month>12; all on/before Received)"
+tr-00706,fix,"priority P3 -> P2 per SCHEMA v2 rules (payment_failed with amount >= Rs 5,000)"
+tr-00707,fix,"priority P3 -> P2 per SCHEMA v2 rules (refund with amount >= Rs 5,000)"
+tr-00716,drop,exact duplicate of tr-00149 (identical ticket and label)
+tr-00717,fix,priority P1 -> P3 per SCHEMA v2 rules (no P1/P2 condition met)
+tr-00727,fix,amount_paise was in rupees (not x100; sometimes decimals dropped); re-derived from the amount stated in the ticket
+tr-00735,drop,"label JSON truncated (63-137 chars vs 147-194 normal); language/needs_human missing, not recoverable with certainty"
+tr-00744,fix,legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows
+tr-00745,fix,priority P1 -> P3 per SCHEMA v2 rules (no P1/P2 condition met)
+tr-00746,fix,priority P3 -> P2 per SCHEMA v2 rules (category account_access)
+tr-00755,drop,near-duplicate of dev ticket dv-00108 (char-ngram cosine 0.985; differs only by whitespace/'Thx'/filler); leakage
+tr-00757,fix,priority P1 -> P3 per SCHEMA v2 rules (no P1/P2 condition met)
+tr-00761,drop,exact duplicate of tr-00127 (identical ticket and label)
+tr-00765,drop,"label JSON truncated (63-137 chars vs 147-194 normal); language/needs_human missing, not recoverable with certainty"
+tr-00771,fix,"txn_id normalised to NP+10 digits (uppercase, no spaces/hyphens); verified present in ticket text"
+tr-00773,drop,exact duplicate of tr-00186 (identical ticket and label)
+tr-00778,fix,legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows
+tr-00782,fix,priority P1 -> P3 per SCHEMA v2 rules (no P1/P2 condition met)
+tr-00783,drop,exact duplicate of tr-00441 (identical ticket and label)
+tr-00789,drop,ticket body identical to a dev ticket (leakage); dev rows must never be trained on
+tr-00790,drop,"placeholder ticket text (e.g. ""test"", ""asdf asdf"") with a fully populated label; label not grounded in input"
+tr-00791,fix,"legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows | txn_date DD/MM/YYYY -> YYYY-MM-DD (DD/MM proven: 17 rows with day>12, 0 with month>12; all on/before Received)"
+tr-00794,drop,"placeholder ticket text (e.g. ""test"", ""asdf asdf"") with a fully populated label; label not grounded in input"
+tr-00795,fix,amount_paise was in rupees (not x100; sometimes decimals dropped); re-derived from the amount stated in the ticket
+tr-00800,drop,exact duplicate of tr-00530 (identical ticket and label)
+tr-00802,fix,priority P1 -> P3 per SCHEMA v2 rules (no P1/P2 condition met)
+tr-00809,drop,"label JSON truncated (63-137 chars vs 147-194 normal); language/needs_human missing, not recoverable with certainty"
+tr-00811,drop,exact duplicate of tr-00052 (identical ticket and label)
+tr-00820,fix,"legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows | txn_date DD/MM/YYYY -> YYYY-MM-DD (DD/MM proven: 17 rows with day>12, 0 with month>12; all on/before Received)"
+tr-00822,drop,near-duplicate of tr-00816 (char-ngram cosine >= 0.95; differs only by whitespace/'Thx'/punctuation; identical label)
+tr-00824,drop,"label JSON truncated (63-137 chars vs 147-194 normal); language/needs_human missing, not recoverable with certainty"
+tr-00838,fix,"txn_id normalised to NP+10 digits (uppercase, no spaces/hyphens); verified present in ticket text"
+tr-00839,fix,"legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows | txn_date DD/MM/YYYY -> YYYY-MM-DD (DD/MM proven: 17 rows with day>12, 0 with month>12; all on/before Received)"
+tr-00840,drop,ticket body identical to a dev ticket (leakage); dev rows must never be trained on
+tr-00843,drop,exact duplicate of tr-00479 (identical ticket and label)
+tr-00845,fix,amount_paise was in rupees (not x100; sometimes decimals dropped); re-derived from the amount stated in the ticket
+tr-00846,drop,"label JSON truncated (63-137 chars vs 147-194 normal); language/needs_human missing, not recoverable with certainty"
+tr-00850,drop,near-duplicate of tr-00575 (char-ngram cosine >= 0.95; differs only by whitespace/'Thx'/punctuation; identical label)
+tr-00852,fix,priority P3 -> P1 per SCHEMA v2 rules (legal threat ('Consumer court'))
+tr-00854,drop,near-duplicate of dev ticket dv-00186 (char-ngram cosine 0.958; differs only by whitespace/'Thx'/filler); leakage
+tr-00861,drop,near-duplicate of tr-00764 (char-ngram cosine >= 0.95; differs only by whitespace/'Thx'/punctuation; identical label)
+tr-00864,drop,near-duplicate of tr-00038 (char-ngram cosine >= 0.95; differs only by whitespace/'Thx'/punctuation; identical label)
+tr-00870,drop,near-duplicate of tr-00099 (char-ngram cosine >= 0.95; differs only by whitespace/'Thx'/punctuation; identical label)
+tr-00879,fix,priority P1 -> P3 per SCHEMA v2 rules (no P1/P2 condition met)
+tr-00880,drop,exact duplicate of tr-00451 (identical ticket and label)
+tr-00888,fix,"txn_id normalised to NP+10 digits (uppercase, no spaces/hyphens); verified present in ticket text"
+tr-00890,fix,priority P3 -> P1 per SCHEMA v2 rules (legal threat ('RBI'))
+tr-00899,fix,"txn_id normalised to NP+10 digits (uppercase, no spaces/hyphens); verified present in ticket text"
+tr-00900,drop,near-duplicate of tr-00432 (char-ngram cosine >= 0.95; differs only by whitespace/'Thx'/punctuation; identical label)
+tr-00907,drop,ticket body identical to a dev ticket (leakage); dev rows must never be trained on
+tr-00908,fix,"txn_id normalised to NP+10 digits (uppercase, no spaces/hyphens); verified present in ticket text"
+tr-00913,drop,exact duplicate of tr-00181 (identical ticket and label)
+tr-00920,fix,amount_paise was in rupees (not x100; sometimes decimals dropped); re-derived from the amount stated in the ticket
+tr-00922,fix,legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows
+tr-00932,fix,"priority P3 -> P2 per SCHEMA v2 rules (payment_failed with amount >= Rs 5,000)"
+tr-00933,fix,priority P1 -> P3 per SCHEMA v2 rules (no P1/P2 condition met)
+tr-00936,drop,exact duplicate of tr-00766 (identical ticket and label)
+tr-00941,drop,ticket body identical to a dev ticket (leakage); dev rows must never be trained on
+tr-00958,drop,"label JSON truncated (63-137 chars vs 147-194 normal); language/needs_human missing, not recoverable with certainty"
+tr-00960,drop,"label JSON truncated (63-137 chars vs 147-194 normal); language/needs_human missing, not recoverable with certainty"
+tr-00967,fix,priority P1 -> P3 per SCHEMA v2 rules (no P1/P2 condition met)
+tr-00968,drop,exact duplicate of tr-00239 (identical ticket and label)
+tr-00970,drop,ticket body identical to a dev ticket (leakage); dev rows must never be trained on
+tr-00975,drop,"label JSON truncated (63-137 chars vs 147-194 normal); language/needs_human missing, not recoverable with certainty"
+tr-00977,drop,exact duplicate of tr-00272 (identical ticket and label)
+tr-00978,drop,"label JSON truncated (63-137 chars vs 147-194 normal); language/needs_human missing, not recoverable with certainty"
+tr-00979,drop,"label JSON truncated (63-137 chars vs 147-194 normal); language/needs_human missing, not recoverable with certainty"
+tr-00980,drop,"label JSON truncated (63-137 chars vs 147-194 normal); language/needs_human missing, not recoverable with certainty"
+tr-00983,drop,near-duplicate of tr-00041 (char-ngram cosine >= 0.95; differs only by whitespace/'Thx'/punctuation; identical label)
+tr-00985,fix,"legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows | txn_date DD/MM/YYYY -> YYYY-MM-DD (DD/MM proven: 17 rows with day>12, 0 with month>12; all on/before Received)"
+tr-00986,fix,amount_paise was in rupees (not x100; sometimes decimals dropped); re-derived from the amount stated in the ticket
+tr-00987,fix,legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows
+tr-00988,drop,near-duplicate of tr-00617 (char-ngram cosine >= 0.95; differs only by whitespace/'Thx'/punctuation; identical label)
+tr-00990,drop,near-duplicate of tr-00726 (char-ngram cosine >= 0.95; differs only by whitespace/'Thx'/punctuation; identical label)
+tr-01000,drop,exact duplicate of tr-00238 (identical ticket and label)
+tr-01001,drop,ticket body identical to a dev ticket (leakage); dev rows must never be trained on
+tr-01006,fix,legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows
+tr-01010,drop,near-duplicate of tr-00188 (char-ngram cosine >= 0.95; differs only by whitespace/'Thx'/punctuation; identical label)
+tr-01011,drop,exact duplicate of tr-00221 (identical ticket and label)
+tr-01012,fix,"txn_id normalised to NP+10 digits (uppercase, no spaces/hyphens); verified present in ticket text"
+tr-01013,drop,near-duplicate of tr-00584 (char-ngram cosine >= 0.95; differs only by whitespace/'Thx'/punctuation; identical label)
+tr-01017,fix,priority P3 -> P1 per SCHEMA v2 rules (legal threat ('consumer court'))
+tr-01019,fix,priority P3 -> P1 per SCHEMA v2 rules (category fraud)
+tr-01023,fix,"priority P3 -> P1 per SCHEMA v2 rules (amount >= Rs 50,000)"
+tr-01028,fix,legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows
+tr-01030,drop,exact duplicate of tr-00342 (identical ticket and label)
+tr-01031,drop,ticket body identical to a dev ticket (leakage); dev rows must never be trained on
+tr-01032,drop,"placeholder ticket text (e.g. ""test"", ""asdf asdf"") with a fully populated label; label not grounded in input"
+tr-01033,drop,near-duplicate of tr-00135 (char-ngram cosine >= 0.95; differs only by whitespace/'Thx'/punctuation; identical label)
+tr-01042,drop,near-duplicate of tr-00774 (char-ngram cosine >= 0.95; differs only by whitespace/'Thx'/punctuation; identical label)
+tr-01044,drop,exact duplicate of tr-01016 (identical ticket and label)
+tr-01046,fix,"legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows | txn_date DD/MM/YYYY -> YYYY-MM-DD (DD/MM proven: 17 rows with day>12, 0 with month>12; all on/before Received)"
+tr-01048,fix,priority P1 -> P3 per SCHEMA v2 rules (no P1/P2 condition met)
+tr-01050,drop,near-duplicate of dev ticket dv-00101 (cosine 0.846; intent-only ticket differing only by greeting/filler; leak threshold 0.83 set by reading the 0.78-0.85 band)
+tr-01052,drop,near-duplicate of tr-00934 (char-ngram cosine >= 0.95; differs only by whitespace/'Thx'/punctuation; identical label)
+tr-01055,drop,near-duplicate of tr-00259 (char-ngram cosine >= 0.95; differs only by whitespace/'Thx'/punctuation; identical label)
+tr-01067,drop,exact duplicate of tr-00445 (identical ticket and label)
+tr-01070,drop,"label JSON truncated (63-137 chars vs 147-194 normal); language/needs_human missing, not recoverable with certainty"
+tr-01078,drop,near-duplicate of tr-00051 (char-ngram cosine >= 0.95; differs only by whitespace/'Thx'/punctuation; identical label)
+tr-01083,fix,legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows
+tr-01085,drop,exact duplicate of tr-00883 (identical ticket and label)
+tr-01086,fix,priority P3 -> P1 per SCHEMA v2 rules (legal threat ('Consumer court'))
+tr-01087,drop,"label JSON truncated (63-137 chars vs 147-194 normal); language/needs_human missing, not recoverable with certainty"
+tr-01089,fix,legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows
+tr-01093,drop,exact duplicate of tr-00408 (identical ticket and label)
+tr-01095,fix,amount_paise was in rupees (not x100; sometimes decimals dropped); re-derived from the amount stated in the ticket
+tr-01102,drop,near-duplicate of tr-00458 (char-ngram cosine >= 0.95; differs only by whitespace/'Thx'/punctuation; identical label)
+tr-01104,drop,exact duplicate of tr-00954 (identical ticket and label)
+tr-01108,drop,exact duplicate of tr-00632 (identical ticket and label)
+tr-01109,fix,"priority P3 -> P2 per SCHEMA v2 rules (refund with amount >= Rs 5,000)"
+tr-01112,drop,near-duplicate of tr-00057 (char-ngram cosine >= 0.95; differs only by whitespace/'Thx'/punctuation; identical label)
+tr-01115,fix,legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows
+tr-01129,drop,near-duplicate of tr-00052 (char-ngram cosine >= 0.95; differs only by whitespace/'Thx'/punctuation; identical label)
+tr-01131,fix,priority P3 -> P2 per SCHEMA v2 rules (category account_access)
+tr-01133,fix,"legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows | txn_date DD/MM/YYYY -> YYYY-MM-DD (DD/MM proven: 17 rows with day>12, 0 with month>12; all on/before Received)"
+tr-01134,drop,exact duplicate of tr-00446 (identical ticket and label)
+tr-01135,drop,exact duplicate of tr-00686 (identical ticket and label)
+tr-01136,fix,"txn_id normalised to NP+10 digits (uppercase, no spaces/hyphens); verified present in ticket text"
+tr-01138,drop,near-duplicate of tr-00165 (char-ngram cosine >= 0.95; differs only by whitespace/'Thx'/punctuation; identical label)
+tr-01139,drop,exact duplicate of tr-00354 (identical ticket and label)
+tr-01141,drop,exact duplicate of tr-00356 (identical ticket and label)
+tr-01143,fix,"legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows | txn_date DD/MM/YYYY -> YYYY-MM-DD (DD/MM proven: 17 rows with day>12, 0 with month>12; all on/before Received)"
+tr-01146,fix,priority P1 -> P3 per SCHEMA v2 rules (no P1/P2 condition met)
+tr-01151,fix,legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows
+tr-01158,fix,"legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows | txn_date DD/MM/YYYY -> YYYY-MM-DD (DD/MM proven: 17 rows with day>12, 0 with month>12; all on/before Received)"
+tr-01160,drop,ticket body identical to a dev ticket (leakage); dev rows must never be trained on
+tr-01166,drop,"placeholder ticket text (e.g. ""test"", ""asdf asdf"") with a fully populated label; label not grounded in input"
+tr-01170,drop,ticket body identical to a dev ticket (leakage); dev rows must never be trained on
+tr-01172,drop,near-duplicate of dev ticket dv-00045 (char-ngram cosine 0.990; differs only by whitespace/'Thx'/filler); leakage
+tr-01176,drop,exact duplicate of tr-00148 (identical ticket and label)
+tr-01178,fix,"legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows | txn_date DD/MM/YYYY -> YYYY-MM-DD (DD/MM proven: 17 rows with day>12, 0 with month>12; all on/before Received)"
+tr-01180,drop,near-duplicate of tr-00997 (char-ngram cosine >= 0.95; differs only by whitespace/'Thx'/punctuation; identical label)
+tr-01183,drop,exact duplicate of tr-00617 (identical ticket and label)
+tr-01186,drop,ticket body identical to a dev ticket (leakage); dev rows must never be trained on
+tr-01188,fix,"txn_id normalised to NP+10 digits (uppercase, no spaces/hyphens); verified present in ticket text"
+tr-01199,drop,"label JSON truncated (63-137 chars vs 147-194 normal); language/needs_human missing, not recoverable with certainty"
+tr-01202,fix,legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows
+tr-01204,drop,exact duplicate of tr-00767 (identical ticket and label)
+tr-01206,drop,ticket body identical to a dev ticket (leakage); dev rows must never be trained on
+tr-01222,fix,priority P1 -> P3 per SCHEMA v2 rules (no P1/P2 condition met)
+tr-01238,fix,"txn_id normalised to NP+10 digits (uppercase, no spaces/hyphens); verified present in ticket text"
+tr-01239,drop,exact duplicate of tr-00842 (identical ticket and label)
+tr-01241,drop,near-duplicate of tr-01233 (char-ngram cosine >= 0.95; differs only by whitespace/'Thx'/punctuation; identical label)
+tr-01242,drop,near-duplicate of tr-00362 (char-ngram cosine >= 0.95; differs only by whitespace/'Thx'/punctuation; identical label)
+tr-01246,drop,exact duplicate of tr-00851 (identical ticket and label)
+tr-01248,drop,exact duplicate of tr-00856 (identical ticket and label)
+tr-01250,drop,exact duplicate of tr-01058 (identical ticket and label)
+tr-01260,drop,exact duplicate of tr-01054 (identical ticket and label)
+tr-01273,drop,near-duplicate of tr-01014 (char-ngram cosine >= 0.95; differs only by whitespace/'Thx'/punctuation; identical label)
+tr-01274,fix,"legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows | txn_date DD/MM/YYYY -> YYYY-MM-DD (DD/MM proven: 17 rows with day>12, 0 with month>12; all on/before Received)"
+tr-01275,drop,exact duplicate of tr-00947 (identical ticket and label)
+tr-01286,fix,legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows
+tr-01301,fix,legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows
+tr-01304,drop,"placeholder ticket text (e.g. ""test"", ""asdf asdf"") with a fully populated label; label not grounded in input"
+tr-01305,fix,"priority P3 -> P2 per SCHEMA v2 rules (refund with amount >= Rs 5,000)"
+tr-01309,drop,ticket body identical to a dev ticket (leakage); dev rows must never be trained on
+tr-01311,fix,amount_paise was in rupees (not x100; sometimes decimals dropped); re-derived from the amount stated in the ticket
+tr-01313,drop,ticket body identical to a dev ticket (leakage); dev rows must never be trained on
+tr-01314,drop,"placeholder ticket text (e.g. ""test"", ""asdf asdf"") with a fully populated label; label not grounded in input"
+tr-01319,fix,"priority P3 -> P1 per SCHEMA v2 rules (amount >= Rs 50,000)"
+tr-01326,fix,legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows
+tr-01329,drop,near-duplicate of tr-00741 (char-ngram cosine >= 0.95; differs only by whitespace/'Thx'/punctuation; identical label)
+tr-01331,fix,legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows
+tr-01338,drop,near-duplicate of tr-00591 (char-ngram cosine >= 0.95; differs only by whitespace/'Thx'/punctuation; identical label)
+tr-01339,drop,ticket body identical to a dev ticket (leakage); dev rows must never be trained on
+tr-01343,fix,"legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows | txn_date DD/MM/YYYY -> YYYY-MM-DD (DD/MM proven: 17 rows with day>12, 0 with month>12; all on/before Received)"
+tr-01348,drop,near-duplicate of tr-01308 (char-ngram cosine >= 0.95; differs only by whitespace/'Thx'/punctuation; identical label)
+tr-01349,drop,ticket body identical to a dev ticket (leakage); dev rows must never be trained on
+tr-01350,drop,near-duplicate of dev ticket dv-00014 (char-ngram cosine 0.980; differs only by whitespace/'Thx'/filler); leakage
+tr-01355,fix,amount_paise was in rupees (not x100; sometimes decimals dropped); re-derived from the amount stated in the ticket
+tr-01359,fix,legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows
+tr-01363,fix,"txn_id normalised to NP+10 digits (uppercase, no spaces/hyphens); verified present in ticket text"
+tr-01366,fix,"legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows | txn_date DD/MM/YYYY -> YYYY-MM-DD (DD/MM proven: 17 rows with day>12, 0 with month>12; all on/before Received)"
+tr-01370,fix,priority P3 -> P1 per SCHEMA v2 rules (category fraud)
+tr-01375,fix,amount_paise was in rupees (not x100; sometimes decimals dropped); re-derived from the amount stated in the ticket
+tr-01381,drop,exact duplicate of tr-00886 (identical ticket and label)
+tr-01386,fix,legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows
+tr-01393,drop,exact duplicate of tr-00039 (identical ticket and label)
+tr-01398,drop,exact duplicate of tr-00625 (identical ticket and label)
+tr-01399,drop,near-duplicate of tr-00369 (char-ngram cosine >= 0.95; differs only by whitespace/'Thx'/punctuation; identical label)
+tr-01402,drop,near-duplicate of dev ticket dv-00038 (char-ngram cosine 0.879; differs only by whitespace/'Thx'/filler); leakage
+tr-01403,fix,priority P3 -> P1 per SCHEMA v2 rules (legal threat ('consumer court'))
+tr-01407,fix,priority P1 -> P3 per SCHEMA v2 rules (no P1/P2 condition met)
+tr-01409,drop,exact duplicate of tr-01208 (identical ticket and label)
+tr-01413,fix,legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows
+tr-01419,drop,exact duplicate of tr-00303 (identical ticket and label)
+tr-01421,drop,ticket body identical to a dev ticket (leakage); dev rows must never be trained on
+tr-01427,drop,exact duplicate of tr-01268 (identical ticket and label)
+tr-01433,drop,exact duplicate of tr-00896 (identical ticket and label)
+tr-01441,fix,legacy key 'prio' (low/medium/high) -> 'priority' (P3/P2/P1); mapping matches v2 rules on 70/70 rows
+tr-01443,drop,exact duplicate of tr-01357 (identical ticket and label)
